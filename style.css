@@ -13,11 +13,18 @@
 .parent {
     width: 500px;
     height: 500px;
-    background: rebeccapurple;
+    /* background: rebeccapurple; */
     position: relative;
     overflow: clip;
+    border: 1px solid #000;
+    anchor-name: --parent-scrollbar;
 }
 .child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
     height: 100%;
     width: 1200px;
     background: linear-gradient(to right , aqua, red);
@@ -26,6 +33,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    anchor-default: --parent-scrollbar;
     height: 15px;
     width: 100%;
     background: #000;
@@ -36,5 +44,6 @@
     width: 30%;
     height: 8px;
     background: #fff;
+    left: 0;
     cursor: pointer;
 }
